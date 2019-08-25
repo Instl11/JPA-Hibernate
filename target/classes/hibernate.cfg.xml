@@ -1,0 +1,21 @@
+<hibernate-configuration>
+<session-factory>
+    <!--Настройки подключения к БД-->
+    <property name="hibernate.connection.url">jdbc:postgresql://localhost:5433/demo</property>
+    <property name="hibernate.connection.username">postgres</property>
+    <property name="hibernate.connection.password">11111</property>
+    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL95Dialect</property>
+
+    <!--Настройки Hibernate-->
+    <property name="show_sql">true</property> <!--Показывать ли SQL запрос в выводе-->
+    <property name="hibernate.hbm2ddl.auto">update</property> <!--Авто апдейт БД-->
+    <!--<mapping class="Student"/>-->
+<!--    <mapping class="relationShips.Person"/>-->
+    <mapping class="relationShips.Hobbies"/>
+    <!--<mapping class="relationShips.HomeAddress"/>-->
+    <mapping class="inheritance_strategy.Car"/>
+<!--    <mapping class="inheritance_strategy.Opel"/>-->
+<!--    <mapping class="inheritance_strategy.Toyota"/>-->
+
+</session-factory>
+</hibernate-configuration>
